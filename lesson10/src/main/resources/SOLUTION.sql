@@ -1,0 +1,2 @@
+select * from subject group by id having avg(grade) > (select avg(grade) from subject);
+select student.* from student inner join payment on student.id = payment.student_id group by student.id  having avg(payment.amount) > (select avg(amount) from payment);
